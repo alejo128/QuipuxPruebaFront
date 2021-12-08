@@ -1,0 +1,42 @@
+<mat-sidenav-container autosize>
+  <mat-sidenav #sidenav mode="side" opened="true">
+    <mat-nav-list>
+
+      <mat-list-item>
+        <mat-icon mat-list-icon class="sidenav-button" (click)="isExpanded = !isExpanded">menu</mat-icon>
+        <span *ngIf="isExpanded">
+          <a href="/home">
+          <img src="../../../../assets/logo.png" height="30px" width="100px" text-align="left">
+          </a>
+        </span>
+      </mat-list-item>
+
+      <h3 *ngIf="isExpanded" matSubheader>Entities</h3>
+      <hr *ngIf="isExpanded" style="width:90%">
+
+      <mat-list-item [routerLink]="'business'">
+        <mat-icon mat-list-icon >business_center</mat-icon>
+        <span *ngIf="isExpanded">Empresas</span>
+      </mat-list-item>
+
+      <mat-list-item [routerLink]="'article'">
+        <mat-icon mat-list-icon>description</mat-icon>
+        <span *ngIf="isExpanded">Articulos</span>
+      </mat-list-item>
+
+      <mat-list-item [routerLink]="'home'">
+        <mat-icon *ngIf="isExpanded" mat-list-icon>perm_identity</mat-icon>
+        <span *ngIf="isExpanded">Colaboradores</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <div class="header">
+    <img src="../../../../assets/logo.png" alt="logo">
+  </div>
+
+    <router-outlet></router-outlet>
+    <div class="footer">
+      <img src="../../../../assets/logo.png" height="30px" width="100px">
+    </div>
+</mat-sidenav-container>

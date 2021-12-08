@@ -1,0 +1,16 @@
+mat-sidenav-container {
+  height: 100%;
+  display: contents;
+}
+
+mat-toolbar-row, .mat-toolbar-single-row {
+  display: contents;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
